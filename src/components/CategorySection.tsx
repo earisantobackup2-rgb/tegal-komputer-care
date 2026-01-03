@@ -1,21 +1,18 @@
 import { Link } from "react-router-dom";
-import categoryLaptop from "@/assets/category-laptop.jpg";
-import categoryServer from "@/assets/category-server.jpg";
-import categoryPrinter from "@/assets/category-printer.png";
 
 const categories = [
   {
     id: 1,
     name: "PC, Laptop & Mini PC",
     description: "Desktop, Notebook, All-in-One, dan Mini PC untuk semua kebutuhan",
-    image: categoryLaptop,
+    image: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400&h=300&fit=crop",
     slug: "pc-laptop-minipc",
   },
   {
     id: 2,
     name: "Server, Storage & NAS",
     description: "Solusi penyimpanan data enterprise dan server terpercaya",
-    image: categoryServer,
+    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=300&fit=crop",
     slug: "server-storage-nas",
   },
   {
@@ -50,7 +47,7 @@ const categories = [
     id: 7,
     name: "Printer & Scanner",
     description: "Solusi cetak dan scan untuk kebutuhan kantor dan rumah",
-    image: categoryPrinter,
+    image: "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=400&h=300&fit=crop",
     slug: "printer-scanner",
   },
 ];
