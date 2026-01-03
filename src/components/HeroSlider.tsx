@@ -1,34 +1,39 @@
 import { useState, useEffect } from "react";
-import { ChevronLeft, ChevronRight, Laptop, Server, Wrench, Wifi } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { Link } from "react-router-dom";
+
+import heroServer from "@/assets/hero-server.jpg";
+import heroService from "@/assets/hero-service.jpg";
+import heroNetwork from "@/assets/hero-network.png";
 
 const slides = [
   {
     id: 1,
     title: "PC, Laptop & Mini PC",
     description: "Solusi computing terbaik untuk kebutuhan personal dan bisnis Anda",
-    icon: Laptop,
-    color: "from-primary to-primary/80",
+    image: heroService,
+    link: "/kategori/pc-laptop-minipc",
   },
   {
     id: 2,
     title: "Server, Storage & NAS",
     description: "Infrastruktur enterprise untuk keamanan dan performa data Anda",
-    icon: Server,
-    color: "from-primary/90 to-primary/70",
+    image: heroServer,
+    link: "/kategori/server-storage-nas",
   },
   {
     id: 3,
     title: "Service Center",
     description: "Layanan perbaikan dan maintenance dengan teknisi berpengalaman",
-    icon: Wrench,
-    color: "from-primary/80 to-primary/60",
+    image: heroService,
+    link: "/kategori/service-center",
   },
   {
     id: 4,
     title: "Network & Security",
     description: "Solusi jaringan dan keamanan lengkap untuk bisnis Anda",
-    icon: Wifi,
-    color: "from-primary/85 to-primary/65",
+    image: heroNetwork,
+    link: "/kategori/network-firewall",
   },
 ];
 
@@ -47,73 +52,79 @@ const HeroSlider = () => {
   const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % slides.length);
 
   return (
-    <section className="relative overflow-hidden bg-gradient-hero">
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-        }} />
-      </div>
+    <section className="relative overflow-hidden">
+      <div className="relative h-[50vh] min-h-[400px] md:h-[60vh] md:min-h-[500px]">
+        {slides.map((slide, index) => (
+          <div
+            key={slide.id}
+            className={`absolute inset-0 transition-all duration-700 ease-in-out ${
+              index === currentSlide
+                ? "opacity-100 scale-100"
+                : "opacity-0 scale-105"
+            }`}
+          >
+            {/* Background Image */}
+            <div
+              className="absolute inset-0 bg-cover bg-center"
+              style={{ backgroundImage: `url(${slide.image})` }}
+            >
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-primary/50" />
+            </div>
 
-      <div className="container relative py-16 md:py-24">
-        <div className="relative min-h-[280px] md:min-h-[320px]">
-          {slides.map((slide, index) => {
-            const Icon = slide.icon;
-            return (
-              <div
-                key={slide.id}
-                className={`absolute inset-0 flex flex-col items-center justify-center text-center transition-all duration-700 ease-in-out ${
-                  index === currentSlide
-                    ? "opacity-100 translate-x-0"
-                    : index < currentSlide
-                    ? "opacity-0 -translate-x-full"
-                    : "opacity-0 translate-x-full"
-                }`}
-              >
-                <div className="mb-6 flex h-20 w-20 items-center justify-center rounded-2xl bg-primary-foreground/20 backdrop-blur-sm md:h-24 md:w-24">
-                  <Icon className="h-10 w-10 text-primary-foreground md:h-12 md:w-12" />
-                </div>
-                <h2 className="mb-4 font-heading text-3xl font-bold text-primary-foreground md:text-5xl">
+            {/* Content */}
+            <div className="container relative flex h-full items-center">
+              <div className="max-w-xl px-4 md:px-0">
+                <h2 className="mb-4 font-heading text-3xl font-bold text-primary-foreground md:text-5xl lg:text-6xl">
                   {slide.title}
                 </h2>
-                <p className="max-w-2xl text-lg text-primary-foreground/90 md:text-xl">
+                <p className="mb-6 text-base text-primary-foreground/90 md:text-lg lg:text-xl">
                   {slide.description}
                 </p>
+                <Link
+                  to={slide.link}
+                  className="inline-flex items-center gap-2 rounded-full bg-primary-foreground px-6 py-3 font-medium text-primary transition-all hover:bg-primary-foreground/90 hover:shadow-lg"
+                >
+                  Lihat Produk
+                  <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </Link>
               </div>
-            );
-          })}
-        </div>
+            </div>
+          </div>
+        ))}
+      </div>
 
-        {/* Navigation arrows */}
-        <button
-          onClick={prevSlide}
-          className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-primary-foreground/20 p-2 text-primary-foreground backdrop-blur-sm transition-all hover:bg-primary-foreground/30"
-          aria-label="Previous slide"
-        >
-          <ChevronLeft className="h-6 w-6" />
-        </button>
-        <button
-          onClick={nextSlide}
-          className="absolute right-4 top-1/2 -translate-y-1/2 rounded-full bg-primary-foreground/20 p-2 text-primary-foreground backdrop-blur-sm transition-all hover:bg-primary-foreground/30"
-          aria-label="Next slide"
-        >
-          <ChevronRight className="h-6 w-6" />
-        </button>
+      {/* Navigation arrows */}
+      <button
+        onClick={prevSlide}
+        className="absolute left-2 top-1/2 -translate-y-1/2 rounded-full bg-primary-foreground/20 p-2 text-primary-foreground backdrop-blur-sm transition-all hover:bg-primary-foreground/30 md:left-4 md:p-3"
+        aria-label="Previous slide"
+      >
+        <ChevronLeft className="h-5 w-5 md:h-6 md:w-6" />
+      </button>
+      <button
+        onClick={nextSlide}
+        className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-primary-foreground/20 p-2 text-primary-foreground backdrop-blur-sm transition-all hover:bg-primary-foreground/30 md:right-4 md:p-3"
+        aria-label="Next slide"
+      >
+        <ChevronRight className="h-5 w-5 md:h-6 md:w-6" />
+      </button>
 
-        {/* Dots */}
-        <div className="mt-8 flex justify-center gap-2">
-          {slides.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => goToSlide(index)}
-              className={`h-2.5 rounded-full transition-all duration-300 ${
-                index === currentSlide
-                  ? "w-8 bg-primary-foreground"
-                  : "w-2.5 bg-primary-foreground/40 hover:bg-primary-foreground/60"
-              }`}
-              aria-label={`Go to slide ${index + 1}`}
-            />
-          ))}
-        </div>
+      {/* Dots */}
+      <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 gap-2 md:bottom-6">
+        {slides.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => goToSlide(index)}
+            className={`h-2 rounded-full transition-all duration-300 md:h-2.5 ${
+              index === currentSlide
+                ? "w-6 bg-primary-foreground md:w-8"
+                : "w-2 bg-primary-foreground/40 hover:bg-primary-foreground/60 md:w-2.5"
+            }`}
+            aria-label={`Go to slide ${index + 1}`}
+          />
+        ))}
       </div>
     </section>
   );
