@@ -1,4 +1,3 @@
-import { Laptop, Server, Wrench, Headphones, Camera, Wifi, Printer } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const categories = [
@@ -6,56 +5,56 @@ const categories = [
     id: 1,
     name: "PC, Laptop & Mini PC",
     description: "Desktop, Notebook, All-in-One, dan Mini PC untuk semua kebutuhan",
-    icon: Laptop,
+    image: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400&h=300&fit=crop",
     slug: "pc-laptop-minipc",
   },
   {
     id: 2,
     name: "Server, Storage & NAS",
     description: "Solusi penyimpanan data enterprise dan server terpercaya",
-    icon: Server,
+    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=300&fit=crop",
     slug: "server-storage-nas",
   },
   {
     id: 3,
     name: "Service Center",
     description: "Perbaikan dan maintenance hardware oleh teknisi berpengalaman",
-    icon: Wrench,
+    image: "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=400&h=300&fit=crop",
     slug: "service-center",
   },
   {
     id: 4,
     name: "Aksesoris",
     description: "Keyboard, mouse, headset, dan aksesoris komputer lainnya",
-    icon: Headphones,
+    image: "https://images.unsplash.com/photo-1527814050087-3793815479db?w=400&h=300&fit=crop",
     slug: "aksesoris",
   },
   {
     id: 5,
     name: "CCTV & Surveillance",
     description: "Sistem keamanan dan pengawasan untuk rumah dan bisnis",
-    icon: Camera,
+    image: "https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=400&h=300&fit=crop",
     slug: "cctv-surveillance",
   },
   {
     id: 6,
     name: "Network & Firewall",
     description: "Router, access point, firewall, dan perangkat jaringan",
-    icon: Wifi,
+    image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=400&h=300&fit=crop",
     slug: "network-firewall",
   },
   {
     id: 7,
     name: "Printer & Scanner",
     description: "Solusi cetak dan scan untuk kebutuhan kantor dan rumah",
-    icon: Printer,
+    image: "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=400&h=300&fit=crop",
     slug: "printer-scanner",
   },
 ];
 
 const CategorySection = () => {
   return (
-    <section className="py-12 md:py-16 lg:py-20">
+    <section className="bg-muted/30 py-12 md:py-16 lg:py-20">
       <div className="container px-4">
         <div className="mb-8 text-center md:mb-12">
           <h2 className="mb-3 font-heading text-2xl font-bold text-foreground md:text-3xl lg:text-4xl">
@@ -67,25 +66,29 @@ const CategorySection = () => {
         </div>
 
         <div className="grid gap-4 grid-cols-2 sm:gap-6 lg:grid-cols-3 xl:grid-cols-4">
-          {categories.map((category, index) => {
-            const Icon = category.icon;
-            return (
-              <Link
-                key={category.id}
-                to={`/kategori/${category.slug}`}
-                className="group relative overflow-hidden rounded-xl border border-border bg-card p-4 shadow-card transition-all duration-300 hover:-translate-y-1 hover:shadow-elevated md:rounded-2xl md:p-6"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <div className="absolute -right-6 -top-6 h-16 w-16 rounded-full bg-primary/5 transition-transform duration-500 group-hover:scale-150 md:-right-8 md:-top-8 md:h-24 md:w-24" />
-                
-                <div className="mb-3 inline-flex rounded-lg bg-primary/10 p-2 text-primary md:mb-4 md:rounded-xl md:p-3">
-                  <Icon className="h-5 w-5 md:h-6 md:w-6" />
-                </div>
-                
-                <h3 className="mb-1 font-heading text-sm font-semibold text-foreground md:mb-2 md:text-lg">
+          {categories.map((category, index) => (
+            <Link
+              key={category.id}
+              to={`/kategori/${category.slug}`}
+              className="group relative overflow-hidden rounded-xl border border-border bg-card shadow-card transition-all duration-300 hover:-translate-y-1 hover:shadow-elevated md:rounded-2xl"
+              style={{ animationDelay: `${index * 100}ms` }}
+            >
+              {/* Image */}
+              <div className="relative h-32 overflow-hidden md:h-40">
+                <img
+                  src={category.image}
+                  alt={category.name}
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent" />
+              </div>
+
+              {/* Content */}
+              <div className="p-4 md:p-5">
+                <h3 className="mb-1 font-heading text-sm font-semibold text-foreground md:mb-2 md:text-base lg:text-lg">
                   {category.name}
                 </h3>
-                <p className="text-xs text-muted-foreground md:text-sm">
+                <p className="text-xs text-muted-foreground line-clamp-2 md:text-sm">
                   {category.description}
                 </p>
 
@@ -95,9 +98,9 @@ const CategorySection = () => {
                     <path d="M5 12h14M12 5l7 7-7 7" />
                   </svg>
                 </div>
-              </Link>
-            );
-          })}
+              </div>
+            </Link>
+          ))}
         </div>
       </div>
     </section>
