@@ -5,13 +5,14 @@ import { Link } from "react-router-dom";
 import heroServer from "@/assets/hero-server.jpg";
 import heroService from "@/assets/hero-service-new.jpg";
 import heroNetwork from "@/assets/hero-network.png";
+import heroLaptop from "@/assets/hero-laptop.jpg";
 
 const slides = [
   {
     id: 1,
     title: "PC, Laptop & Mini PC",
     description: "Solusi computing terbaik untuk kebutuhan personal dan bisnis Anda",
-    image: heroService,
+    image: heroLaptop,
     link: "/kategori/pc-laptop-minipc",
   },
   {
