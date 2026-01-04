@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import categoryCctv from "@/assets/category-cctv.webp";
 
 const categories = [
   {
@@ -33,7 +34,7 @@ const categories = [
     id: 5,
     name: "CCTV & Surveillance",
     description: "Sistem keamanan dan pengawasan untuk rumah dan bisnis",
-    image: "https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=400&h=300&fit=crop",
+    image: categoryCctv,
     slug: "cctv-surveillance",
   },
   {

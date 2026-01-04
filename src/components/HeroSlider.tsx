@@ -3,9 +3,10 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 import heroServer from "@/assets/hero-server.jpg";
-import heroService from "@/assets/hero-service-new.jpg";
-import heroNetwork from "@/assets/hero-network.png";
+import heroService from "@/assets/hero-service.webp";
+import heroNetwork from "@/assets/hero-network.jpg";
 import heroLaptop from "@/assets/hero-laptop.jpg";
+import heroPrinter from "@/assets/hero-printer.jpg";
 
 const slides = [
   {
@@ -14,6 +15,7 @@ const slides = [
     description: "Solusi computing terbaik untuk kebutuhan personal dan bisnis Anda",
     image: heroLaptop,
     link: "/kategori/pc-laptop-minipc",
+    showButton: true,
   },
   {
     id: 2,
@@ -21,20 +23,31 @@ const slides = [
     description: "Infrastruktur enterprise untuk keamanan dan performa data Anda",
     image: heroServer,
     link: "/kategori/server-storage-nas",
+    showButton: true,
   },
   {
     id: 3,
+    title: "Printer & Scanner",
+    description: "Solusi cetak dan scan berkualitas untuk kebutuhan kantor dan rumah",
+    image: heroPrinter,
+    link: "/kategori/printer-scanner",
+    showButton: true,
+  },
+  {
+    id: 4,
+    title: "Network & Firewall",
+    description: "Solusi jaringan dan keamanan lengkap untuk bisnis Anda",
+    image: heroNetwork,
+    link: "/kategori/network-firewall",
+    showButton: true,
+  },
+  {
+    id: 5,
     title: "Service Center",
     description: "Layanan perbaikan dan maintenance dengan teknisi berpengalaman",
     image: heroService,
     link: "/kategori/service-center",
-  },
-  {
-    id: 4,
-    title: "Network & Security",
-    description: "Solusi jaringan dan keamanan lengkap untuk bisnis Anda",
-    image: heroNetwork,
-    link: "/kategori/network-firewall",
+    showButton: false,
   },
 ];
 
@@ -81,15 +94,17 @@ const HeroSlider = () => {
                 <p className="mb-6 text-base text-primary-foreground/90 md:text-lg lg:text-xl">
                   {slide.description}
                 </p>
-                <Link
-                  to={slide.link}
-                  className="inline-flex items-center gap-2 rounded-full bg-primary-foreground px-6 py-3 font-medium text-primary transition-all hover:bg-primary-foreground/90 hover:shadow-lg"
-                >
-                  Lihat Produk
-                  <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M5 12h14M12 5l7 7-7 7" />
-                  </svg>
-                </Link>
+                {slide.showButton && (
+                  <Link
+                    to={slide.link}
+                    className="inline-flex items-center gap-2 rounded-full bg-primary-foreground px-6 py-3 font-medium text-primary transition-all hover:bg-primary-foreground/90 hover:shadow-lg"
+                  >
+                    Lihat Produk
+                    <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                  </Link>
+                )}
               </div>
             </div>
           </div>
