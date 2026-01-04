@@ -1,16 +1,23 @@
+import brandKingston from "@/assets/brand-kingston.jpg";
+import brandGigabyte from "@/assets/brand-gigabyte.jpg";
+import brandAdata from "@/assets/brand-adata.jpg";
+import brandEpson from "@/assets/brand-epson.jpg";
+import brandMsi from "@/assets/brand-msi.jpg";
+import brandSynology from "@/assets/brand-synology.jpg";
+
 const brands = [
   { name: "ASUS", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/ASUS_Logo.svg/200px-ASUS_Logo.svg.png" },
   { name: "Lenovo", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Lenovo_logo_2015.svg/200px-Lenovo_logo_2015.svg.png" },
   { name: "Dell", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Dell_Logo.svg/200px-Dell_Logo.svg.png" },
-  { name: "Gigabyte", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Gigabyte_Technology_logo_20080107.svg/200px-Gigabyte_Technology_logo_20080107.svg.png" },
-  { name: "Epson", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Epson_logo.svg/200px-Epson_logo.svg.png" },
+  { name: "Gigabyte", logo: brandGigabyte },
+  { name: "Epson", logo: brandEpson },
   { name: "Canon", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Canon_wordmark.svg/200px-Canon_wordmark.svg.png" },
   { name: "HP", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/HP_logo_2012.svg/150px-HP_logo_2012.svg.png" },
   { name: "Fortinet", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Fortinet_logo.svg/200px-Fortinet_logo.svg.png" },
-  { name: "Synology", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Synology_logo.svg/200px-Synology_logo.svg.png" },
-  { name: "Kingston", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Kingston_Technology_logo.svg/200px-Kingston_Technology_logo.svg.png" },
-  { name: "ADATA", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/ADATA_Logo.svg/200px-ADATA_Logo.svg.png" },
-  { name: "MSI", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/MSI_Logo.svg/200px-MSI_Logo.svg.png" },
+  { name: "Synology", logo: brandSynology },
+  { name: "Kingston", logo: brandKingston },
+  { name: "ADATA", logo: brandAdata },
+  { name: "MSI", logo: brandMsi },
 ];
 
 const BrandSection = () => {
