@@ -3,7 +3,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 import heroServer from "@/assets/hero-server.jpg";
-import heroService from "@/assets/hero-service.jpg";
+import heroService from "@/assets/hero-service-new.jpg";
 import heroNetwork from "@/assets/hero-network.png";
 
 const slides = [
