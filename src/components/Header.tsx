@@ -35,9 +35,9 @@ const Header = () => {
             <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary p-1 md:h-12 md:w-12">
               <img src={logo} alt="Indo Komputer" className="h-full w-full object-contain" />
             </div>
-            <div className="hidden sm:block">
-              <h1 className="font-heading text-lg font-bold text-foreground md:text-xl">Indo Komputer</h1>
-              <p className="text-xs text-muted-foreground">Tegal</p>
+            <div>
+              <h1 className="font-heading text-base font-bold text-foreground sm:text-lg md:text-xl">Indo Komputer</h1>
+              <p className="hidden text-xs text-muted-foreground sm:block">Tegal</p>
             </div>
           </Link>
 
