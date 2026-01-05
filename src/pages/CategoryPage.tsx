@@ -5,20 +5,26 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
-const categoryData: Record<string, { title: string; description: string; products: string[]; backgroundImage: string }> = {
+interface Product {
+  name: string;
+  description?: string;
+  image?: string;
+}
+
+const categoryData: Record<string, { title: string; description: string; products: Product[]; backgroundImage: string }> = {
   "pc-laptop-minipc": {
     title: "PC, Laptop & Mini PC",
     description: "Desktop, Notebook, All-in-One, dan Mini PC untuk semua kebutuhan computing Anda",
     backgroundImage: "https://realcomputer.in/image/cache/catalog/Untitled-1920x608.jpg",
     products: [
-      "Laptop ASUS VivoBook",
-      "Laptop Lenovo ThinkPad",
-      "Laptop Dell Latitude",
-      "Desktop PC Custom Build",
-      "Mini PC Intel NUC",
-      "All-in-One PC HP",
-      "Laptop Gaming MSI",
-      "Laptop ASUS ROG",
+      { name: "Laptop ASUS VivoBook" },
+      { name: "Laptop Lenovo ThinkPad" },
+      { name: "Laptop Dell Latitude" },
+      { name: "Desktop PC Custom Build" },
+      { name: "Mini PC Intel NUC" },
+      { name: "All-in-One PC HP" },
+      { name: "Laptop Gaming MSI" },
+      { name: "Laptop ASUS ROG" },
     ],
   },
   "server-storage-nas": {
@@ -26,14 +32,56 @@ const categoryData: Record<string, { title: string; description: string; product
     description: "Solusi penyimpanan data enterprise dan server terpercaya untuk bisnis Anda",
     backgroundImage: "https://www.cyberwala.com/wp-content/uploads/2021/04/Dell-New-Rack-Server-1536x394.jpg",
     products: [
-      "Synology NAS DiskStation",
-      "Dell PowerEdge Server",
-      "HP ProLiant Server",
-      "Western Digital HDD",
-      "Seagate IronWolf NAS",
-      "Kingston SSD Enterprise",
-      "QNAP NAS",
-      "Rack Server Custom",
+      {
+        name: "PowerEdge R760 Rack Server",
+        description: "The 2U, 2 socket Dell PowerEdge R760 enables faster time to value with peak compute performance, through optimum configurations.",
+        image: "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-enterprise-products/enterprise-systems/poweredge/r760/media-gallery/server-poweredge-r760-black-gallery-4.psd?fmt=png-alpha&pscan=auto&scl=1&wid=3210&hei=1038&qlt=100,1&resMode=sharp2&size=3210,1038&chrss=full&imwidth=5000",
+      },
+      {
+        name: "PowerEdge R760xs Rack Server",
+        description: "The Dell PowerEdge R760xs is the best choice for the right balance in performance in an air-cooled chassis for the most popular IT applications.",
+        image: "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-enterprise-products/enterprise-systems/poweredge/r760xs/media-gallery/server-poweredge-r760xs-black-gallery-5.psd?fmt=png-alpha&pscan=auto&scl=1&wid=3413&hei=992&qlt=100,1&resMode=sharp2&size=3413,992&chrss=full&imwidth=5000",
+      },
+      {
+        name: "PowerEdge T360 Tower Server",
+        description: "The 4.5U, single-socket PowerEdge T360 is a specially designed form factor for customers desiring versatility, affordability, and processing power.",
+        image: "https://i.dell.com/is/image/DellContent/content/dam/images/products/servers/poweredge/t360/dell-t360-8x3-5-dell-logo-bezel-lf.psd?fmt=png-alpha&pscan=auto&scl=1&wid=5000&hei=5000&qlt=100,1&resMode=sharp2&size=5000,5000&chrss=full&imwidth=5000",
+      },
+      {
+        name: "SYNOLOGY NAS DiskStation DS923+",
+        description: "Synology mengumumkan peluncuran NAS 4-bay terbaru, Synology DiskStation DS923+, model terbaru dalam lini seri Plus sebagai perangkat penyimpanan all-in-one untuk penggunaan bisnis dan kantor UMKM.",
+        image: "https://www.synology.com/cgi/img?action=getImage&o=news&pic_id=290",
+      },
+      {
+        name: "SYNOLOGY NAS RackStation® RS1619xs+",
+        description: "1U rackmount flagship aims for file collaboration and high-performance computation.",
+        image: "https://m.media-amazon.com/images/I/41zBKeo3RIL._AC_SL1280_.jpg",
+      },
+      {
+        name: "HPE ProLiant Compute DL320 Gen12",
+        description: "The HPE ProLiant DL320 Gen12 maximizes your rack utilization while mitigating virtualization risks in power-constrained environments. Power your workloads with a server providing greater expansion capabilities compared to previous generations.",
+        image: "https://www.proliant.ru/files/6904/3549/DL320_Gen12.jpg",
+      },
+      {
+        name: "HPE ProLiant Compute DL380 Gen12",
+        description: "The HPE ProLiant Compute DL380 Gen12 is a scalable 2U 2P server that delivers exceptional compute performance, memory density with scalability and high-speed data transfer rate to run your most demanding applications. Powered by Intel® Xeon® 6 processors with up to 144 cores and up to 8 TB of memory.",
+        image: "https://www.serverbasket.com/wp-content/uploads/2025/04/HPE-ProLiant-Compute-DL380-Gen12-Server.png",
+      },
+      {
+        name: "Supermicro CloudDC SuperServer SYS-621C-TN12R",
+        description: "CloudDC SuperServer SYS-621C-TN12R adalah server kelas enterprise berperforma tinggi yang dirancang untuk kebutuhan data center, cloud computing, dan workload berat seperti virtualisasi, database skala besar, dan AI/enterprise application.",
+        image: "https://www.supermicro.com/files_SYS/images/System/SYS-621C-TN12R_main.jpg",
+      },
+      {
+        name: "ASUSTOR NAS LOCKERSTOR 6 Gen3 (AS6806T)",
+        description: "ASUSTOR NAS LOCKERSTOR 6 Gen3 (AS6806T) adalah perangkat NAS berperforma tinggi yang dirancang untuk penyimpanan data terpusat, kolaborasi tim, dan kebutuhan bisnis maupun profesional.",
+        image: "https://www.asustor.com/images/feature/content_img/AS6806T/banner_model.png",
+      },
+      {
+        name: "ASUS SERVER RS720A-E13-RS24U",
+        description: "ASUS Server RS720A-E13-RS24U adalah server rackmount 2U kelas enterprise yang dirancang untuk kebutuhan data center, cloud, virtualisasi, dan workload komputasi intensif.",
+        image: "https://dlcdnwebimgs.asus.com/gain/e6cf7181-6156-4bea-a4b7-12f465dc2433/w600",
+      },
     ],
   },
   "service-center": {
@@ -41,14 +89,14 @@ const categoryData: Record<string, { title: string; description: string; product
     description: "Layanan perbaikan dan maintenance hardware oleh teknisi berpengalaman",
     backgroundImage: "https://img.freepik.com/premium-photo/young-male-technician-fixing-computer-wooden-desk_23-2147922181.jpg",
     products: [
-      "Perbaikan Laptop",
-      "Upgrade RAM & SSD",
-      "Install Ulang Windows",
-      "Perbaikan Motherboard",
-      "Cleaning & Maintenance",
-      "Recovery Data",
-      "Perbaikan Printer",
-      "Konsultasi IT",
+      { name: "Perbaikan Laptop" },
+      { name: "Upgrade RAM & SSD" },
+      { name: "Install Ulang Windows" },
+      { name: "Perbaikan Motherboard" },
+      { name: "Cleaning & Maintenance" },
+      { name: "Recovery Data" },
+      { name: "Perbaikan Printer" },
+      { name: "Konsultasi IT" },
     ],
   },
   aksesoris: {
@@ -56,14 +104,14 @@ const categoryData: Record<string, { title: string; description: string; product
     description: "Keyboard, mouse, headset, dan aksesoris komputer lainnya",
     backgroundImage: "https://i0.wp.com/www.deells.lk/wp-content/uploads/2021/09/logitech-banner-01.png?w=788&ssl=1",
     products: [
-      "Keyboard Mechanical",
-      "Mouse Gaming",
-      "Headset Wireless",
-      "Webcam HD",
-      "USB Hub",
-      "Laptop Stand",
-      "Mousepad Gaming",
-      "External SSD",
+      { name: "Keyboard Mechanical" },
+      { name: "Mouse Gaming" },
+      { name: "Headset Wireless" },
+      { name: "Webcam HD" },
+      { name: "USB Hub" },
+      { name: "Laptop Stand" },
+      { name: "Mousepad Gaming" },
+      { name: "External SSD" },
     ],
   },
   "cctv-surveillance": {
@@ -71,14 +119,14 @@ const categoryData: Record<string, { title: string; description: string; product
     description: "Sistem keamanan dan pengawasan untuk rumah dan bisnis",
     backgroundImage: "https://img.freepik.com/premium-photo/tech-installs-cctv-camera-security-purposes-concept-security-systems-cctv-installation-tech-services-surveillance-cameras_864588-234963.jpg",
     products: [
-      "IP Camera Hikvision",
-      "DVR 8 Channel",
-      "NVR Dahua",
-      "CCTV Outdoor",
-      "CCTV Indoor",
-      "Access Control",
-      "Intercom System",
-      "Alarm Security",
+      { name: "IP Camera Hikvision" },
+      { name: "DVR 8 Channel" },
+      { name: "NVR Dahua" },
+      { name: "CCTV Outdoor" },
+      { name: "CCTV Indoor" },
+      { name: "Access Control" },
+      { name: "Intercom System" },
+      { name: "Alarm Security" },
     ],
   },
   "network-firewall": {
@@ -86,14 +134,14 @@ const categoryData: Record<string, { title: string; description: string; product
     description: "Router, access point, firewall, dan perangkat jaringan lengkap",
     backgroundImage: "https://completeoffice.co.za/cdn/shop/articles/COS_Website_Blog_Banner_Reyee_Ruijie.png?v=1726557955&width=1000",
     products: [
-      "Router MikroTik",
-      "Access Point Ubiquiti",
-      "Firewall Fortinet",
-      "Switch Managed",
-      "Kabel UTP Cat6",
-      "Rack Server",
-      "Modem WiFi",
-      "Network Tools",
+      { name: "Router MikroTik" },
+      { name: "Access Point Ubiquiti" },
+      { name: "Firewall Fortinet" },
+      { name: "Switch Managed" },
+      { name: "Kabel UTP Cat6" },
+      { name: "Rack Server" },
+      { name: "Modem WiFi" },
+      { name: "Network Tools" },
     ],
   },
   "printer-scanner": {
@@ -101,14 +149,14 @@ const categoryData: Record<string, { title: string; description: string; product
     description: "Solusi cetak dan scan untuk kebutuhan kantor dan rumah",
     backgroundImage: "https://iprsoftwaremedia.com/108/files/20214/60909ba5b3aed365d13a686e_Banner%20MNR%20ET%20Photo_ET%20Pro/Banner%20MNR%20ET%20Photo_ET%20Pro_60e877d3-c51b-4909-b57a-d60e2f902159-prv.png",
     products: [
-      "Printer Epson EcoTank",
-      "Printer HP LaserJet",
-      "Printer Canon PIXMA",
-      "Scanner Flatbed",
-      "Printer Label",
-      "Tinta Printer Original",
-      "Toner LaserJet",
-      "Kertas A4 Premium",
+      { name: "Printer Epson EcoTank" },
+      { name: "Printer HP LaserJet" },
+      { name: "Printer Canon PIXMA" },
+      { name: "Scanner Flatbed" },
+      { name: "Printer Label" },
+      { name: "Tinta Printer Original" },
+      { name: "Toner LaserJet" },
+      { name: "Kertas A4 Premium" },
     ],
   },
 };
@@ -173,26 +221,41 @@ const CategoryPage = () => {
         {/* Products Grid */}
         <section className="py-12 md:py-16">
           <div className="container">
-            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
               {category.products.map((product, index) => (
                 <div
                   key={index}
-                  className="group rounded-xl border border-border bg-card p-6 shadow-card transition-all hover:-translate-y-1 hover:shadow-elevated"
+                  className="group flex flex-col rounded-xl border border-border bg-card shadow-card transition-all hover:-translate-y-1 hover:shadow-elevated"
                 >
-                  <div className="mb-4 flex h-32 items-center justify-center rounded-lg bg-muted">
-                    <span className="text-4xl text-muted-foreground/50">📦</span>
+                  <div className="flex h-48 items-center justify-center overflow-hidden rounded-t-xl bg-muted p-4">
+                    {product.image ? (
+                      <img
+                        src={product.image}
+                        alt={product.name}
+                        className="h-full w-full object-contain transition-transform duration-300 group-hover:scale-105"
+                        loading="lazy"
+                      />
+                    ) : (
+                      <span className="text-5xl text-muted-foreground/50">📦</span>
+                    )}
                   </div>
-                  <h3 className="font-heading font-semibold text-foreground">{product}</h3>
-                  <p className="mt-1 text-sm text-muted-foreground">Hubungi untuk harga terbaik</p>
-                  <a
-                    href={`https://wa.me/6287782524000?text=Halo, saya tertarik dengan ${product}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-4 flex items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
-                  >
-                    <Phone className="h-4 w-4" />
-                    Tanya Harga
-                  </a>
+                  <div className="flex flex-1 flex-col p-5">
+                    <h3 className="font-heading text-lg font-semibold text-foreground">{product.name}</h3>
+                    {product.description ? (
+                      <p className="mt-2 line-clamp-3 flex-1 text-sm text-muted-foreground">{product.description}</p>
+                    ) : (
+                      <p className="mt-1 flex-1 text-sm text-muted-foreground">Hubungi untuk harga terbaik</p>
+                    )}
+                    <a
+                      href={`https://wa.me/6287782524000?text=Halo, saya tertarik dengan ${product.name}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-4 flex items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+                    >
+                      <Phone className="h-4 w-4" />
+                      Tanya Harga
+                    </a>
+                  </div>
                 </div>
               ))}
             </div>
