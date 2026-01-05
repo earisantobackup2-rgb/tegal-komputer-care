@@ -5,10 +5,11 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
-const categoryData: Record<string, { title: string; description: string; products: string[] }> = {
+const categoryData: Record<string, { title: string; description: string; products: string[]; backgroundImage: string }> = {
   "pc-laptop-minipc": {
     title: "PC, Laptop & Mini PC",
     description: "Desktop, Notebook, All-in-One, dan Mini PC untuk semua kebutuhan computing Anda",
+    backgroundImage: "https://realcomputer.in/image/cache/catalog/Untitled-1920x608.jpg",
     products: [
       "Laptop ASUS VivoBook",
       "Laptop Lenovo ThinkPad",
@@ -23,6 +24,7 @@ const categoryData: Record<string, { title: string; description: string; product
   "server-storage-nas": {
     title: "Server, Storage & NAS",
     description: "Solusi penyimpanan data enterprise dan server terpercaya untuk bisnis Anda",
+    backgroundImage: "https://www.cyberwala.com/wp-content/uploads/2021/04/Dell-New-Rack-Server-1536x394.jpg",
     products: [
       "Synology NAS DiskStation",
       "Dell PowerEdge Server",
@@ -37,6 +39,7 @@ const categoryData: Record<string, { title: string; description: string; product
   "service-center": {
     title: "Service Center",
     description: "Layanan perbaikan dan maintenance hardware oleh teknisi berpengalaman",
+    backgroundImage: "https://img.freepik.com/premium-photo/young-male-technician-fixing-computer-wooden-desk_23-2147922181.jpg",
     products: [
       "Perbaikan Laptop",
       "Upgrade RAM & SSD",
@@ -51,6 +54,7 @@ const categoryData: Record<string, { title: string; description: string; product
   aksesoris: {
     title: "Aksesoris",
     description: "Keyboard, mouse, headset, dan aksesoris komputer lainnya",
+    backgroundImage: "https://i0.wp.com/www.deells.lk/wp-content/uploads/2021/09/logitech-banner-01.png?w=788&ssl=1",
     products: [
       "Keyboard Mechanical",
       "Mouse Gaming",
@@ -65,6 +69,7 @@ const categoryData: Record<string, { title: string; description: string; product
   "cctv-surveillance": {
     title: "CCTV & Surveillance",
     description: "Sistem keamanan dan pengawasan untuk rumah dan bisnis",
+    backgroundImage: "https://img.freepik.com/premium-photo/tech-installs-cctv-camera-security-purposes-concept-security-systems-cctv-installation-tech-services-surveillance-cameras_864588-234963.jpg",
     products: [
       "IP Camera Hikvision",
       "DVR 8 Channel",
@@ -79,6 +84,7 @@ const categoryData: Record<string, { title: string; description: string; product
   "network-firewall": {
     title: "Network & Firewall",
     description: "Router, access point, firewall, dan perangkat jaringan lengkap",
+    backgroundImage: "https://completeoffice.co.za/cdn/shop/articles/COS_Website_Blog_Banner_Reyee_Ruijie.png?v=1726557955&width=1000",
     products: [
       "Router MikroTik",
       "Access Point Ubiquiti",
@@ -93,6 +99,7 @@ const categoryData: Record<string, { title: string; description: string; product
   "printer-scanner": {
     title: "Printer & Scanner",
     description: "Solusi cetak dan scan untuk kebutuhan kantor dan rumah",
+    backgroundImage: "https://iprsoftwaremedia.com/108/files/20214/60909ba5b3aed365d13a686e_Banner%20MNR%20ET%20Photo_ET%20Pro/Banner%20MNR%20ET%20Photo_ET%20Pro_60e877d3-c51b-4909-b57a-d60e2f902159-prv.png",
     products: [
       "Printer Epson EcoTank",
       "Printer HP LaserJet",
@@ -138,9 +145,17 @@ const CategoryPage = () => {
       <Header />
 
       <main className="flex-1">
-        {/* Hero */}
-        <section className="bg-gradient-hero py-12 md:py-16">
-          <div className="container">
+        {/* Hero with Background Image */}
+        <section 
+          className="relative py-12 md:py-16"
+          style={{
+            backgroundImage: `url(${category.backgroundImage})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        >
+          <div className="absolute inset-0 bg-primary/80" />
+          <div className="container relative z-10">
             <Link
               to="/"
               className="mb-4 inline-flex items-center text-primary-foreground/80 hover:text-primary-foreground"

@@ -16,6 +16,7 @@ const slides = [
     image: heroLaptop,
     link: "/kategori/pc-laptop-minipc",
     showButton: true,
+    buttonText: "Lihat Produk PC & Laptop",
   },
   {
     id: 2,
@@ -24,6 +25,7 @@ const slides = [
     image: heroServer,
     link: "/kategori/server-storage-nas",
     showButton: true,
+    buttonText: "Lihat Produk Server",
   },
   {
     id: 3,
@@ -32,6 +34,7 @@ const slides = [
     image: heroPrinter,
     link: "/kategori/printer-scanner",
     showButton: true,
+    buttonText: "Lihat Produk Printer",
   },
   {
     id: 4,
@@ -40,6 +43,7 @@ const slides = [
     image: heroNetwork,
     link: "/kategori/network-firewall",
     showButton: true,
+    buttonText: "Lihat Produk Network",
   },
   {
     id: 5,
@@ -48,6 +52,7 @@ const slides = [
     image: heroService,
     link: "/kategori/service-center",
     showButton: false,
+    buttonText: "",
   },
 ];
 
@@ -99,7 +104,7 @@ const HeroSlider = () => {
                     to={slide.link}
                     className="inline-flex items-center gap-2 rounded-full bg-primary-foreground px-6 py-3 font-medium text-primary transition-all hover:bg-primary-foreground/90 hover:shadow-lg"
                   >
-                    Lihat Produk
+                    {slide.buttonText}
                     <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                       <path d="M5 12h14M12 5l7 7-7 7" />
                     </svg>
