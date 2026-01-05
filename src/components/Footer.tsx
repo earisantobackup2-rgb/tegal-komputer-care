@@ -49,6 +49,12 @@ const Footer = () => {
                 </svg>
                 <span>+62 877-8252-4000</span>
               </li>
+              <li className="flex items-start gap-3">
+                <Mail className="mt-0.5 h-4 w-4 text-primary" />
+                <a href="mailto:edo@indokom.biz" className="hover:text-primary transition-colors">
+                  edo@indokom.biz
+                </a>
+              </li>
             </ul>
           </div>
 
