@@ -1,10 +1,21 @@
-import { Phone, Clock, MapPin, Menu, X } from "lucide-react";
+import { Phone, Clock, MapPin, Menu, X, ChevronDown } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "@/assets/logo-indo-komputer.png";
 
+const categories = [
+  { name: "PC, Laptop & Mini PC", slug: "pc-laptop-minipc" },
+  { name: "Server, Storage & NAS", slug: "server-storage-nas" },
+  { name: "Printer & Scanner", slug: "printer-scanner" },
+  { name: "Network & Firewall", slug: "network-firewall" },
+  { name: "CCTV & Surveillance", slug: "cctv-surveillance" },
+  { name: "Aksesoris", slug: "aksesoris" },
+  { name: "Service Center", slug: "service-center" },
+];
+
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [categoryMenuOpen, setCategoryMenuOpen] = useState(false);
 
   return (
     <header className="sticky top-0 z-50 w-full shadow-card">
@@ -42,7 +53,33 @@ const Header = () => {
           </Link>
 
           {/* Desktop nav */}
-          <div className="hidden items-center gap-4 md:flex">
+          <div className="hidden items-center gap-6 lg:flex">
+            {/* Kategori Dropdown */}
+            <div className="relative">
+              <button
+                onClick={() => setCategoryMenuOpen(!categoryMenuOpen)}
+                onBlur={() => setTimeout(() => setCategoryMenuOpen(false), 150)}
+                className="flex items-center gap-1 font-medium text-foreground transition-colors hover:text-primary"
+              >
+                Produk
+                <ChevronDown className={`h-4 w-4 transition-transform ${categoryMenuOpen ? "rotate-180" : ""}`} />
+              </button>
+              {categoryMenuOpen && (
+                <div className="absolute left-0 top-full z-50 mt-2 w-56 rounded-lg border border-border bg-background py-2 shadow-lg">
+                  {categories.map((category) => (
+                    <Link
+                      key={category.slug}
+                      to={`/kategori/${category.slug}`}
+                      className="block px-4 py-2 text-sm text-foreground transition-colors hover:bg-muted hover:text-primary"
+                      onClick={() => setCategoryMenuOpen(false)}
+                    >
+                      {category.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
             <a
               href="https://wa.me/6287782524000"
               target="_blank"
@@ -59,7 +96,7 @@ const Header = () => {
           {/* Mobile menu button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="rounded-lg p-2 text-foreground hover:bg-muted md:hidden"
+            className="rounded-lg p-2 text-foreground hover:bg-muted lg:hidden"
           >
             {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
@@ -67,8 +104,25 @@ const Header = () => {
 
         {/* Mobile menu */}
         {mobileMenuOpen && (
-          <div className="border-t border-border bg-background px-4 py-4 md:hidden">
+          <div className="border-t border-border bg-background px-4 py-4 lg:hidden">
             <div className="flex flex-col gap-3">
+              {/* Mobile Category Links */}
+              <div className="border-b border-border pb-3">
+                <p className="mb-2 text-xs font-semibold uppercase text-muted-foreground">Kategori Produk</p>
+                <div className="grid grid-cols-2 gap-2">
+                  {categories.map((category) => (
+                    <Link
+                      key={category.slug}
+                      to={`/kategori/${category.slug}`}
+                      className="rounded-lg bg-muted px-3 py-2 text-sm text-foreground transition-colors hover:bg-primary hover:text-primary-foreground"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      {category.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
               <div className="flex items-center gap-2 text-muted-foreground">
                 <Clock className="h-4 w-4" />
                 <span className="text-sm">Senin–Sabtu 08:30–17:00 WIB</span>
