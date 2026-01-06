@@ -102,7 +102,7 @@ const HeroSlider = () => {
                 {slide.showButton && (
                   <Link
                     to={slide.link}
-                    className="inline-flex items-center gap-2 rounded-full bg-primary-foreground px-6 py-3 font-medium text-primary transition-all hover:bg-primary-foreground/90 hover:shadow-lg"
+                    className="inline-flex cursor-pointer items-center gap-2 rounded-full bg-primary-foreground px-6 py-3 font-medium text-primary shadow-md transition-all hover:scale-105 hover:bg-primary-foreground/90 hover:shadow-xl active:scale-95"
                   >
                     {slide.buttonText}
                     <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
