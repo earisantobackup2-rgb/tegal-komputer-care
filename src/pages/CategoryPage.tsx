@@ -12,7 +12,7 @@ interface Product {
 }
 
 const categoryData: Record<string, { title: string; description: string; products: Product[]; backgroundImage: string }> = {
-  "pc-laptop-minipc": {
+"pc-laptop-minipc": {
     title: "PC, Laptop & Mini PC",
     description: "Desktop, Notebook, All-in-One, dan Mini PC untuk semua kebutuhan computing Anda",
     backgroundImage: "https://realcomputer.in/image/cache/catalog/Untitled-1920x608.jpg",
@@ -30,7 +30,7 @@ const categoryData: Record<string, { title: string; description: string; product
       {
         name: "ASUS Vivobook 14 A1404VA VIPS3851M Core i3 1315U",
         description: "ASUS Vivobook 14 A1404 adalah seri laptop 14 inci yang dirancang untuk produktivitas sehari-hari, menawarkan performa andal dengan prosesor Intel Core generasi 12 atau 13, desain tipis dan ringan (sekitar 1,4 kg), serta fitur-fitur seperti layar Full HD IPS.",
-        image: "https://p16-images-sign-sg.tokopedia-static.net/tos-alisg-i-aphluv4xwc-sg/img/VqbcmM/2025/4/14/9c4ef36c-ca45-409f-9837-4e1bd3839543.jpg~tplv-aphluv4xwc-resize-jpeg:700:0.jpeg?lk3s=0ccea506&x-expires=1767603911&x-signature=jgJvN%2FN%2FjcdA91U%2B%2FNAW%2BgVXNAQ%3D&x-signature-webp=KtGGR6lrAneSCDge079g4nzCEEg%3D",
+        image: "https://els.id/wp-content/uploads/2023/09/Lenovo-IdeaPad-Slim-5-Cloud-grey-2.png",
       },
       {
         name: "ASUS VIVOBOOK GO 15 E1504FA RYZEN 5 7520",
@@ -40,17 +40,17 @@ const categoryData: Record<string, { title: string; description: string; product
       {
         name: "LENOVO IDEAPAD SLIM 5 14 OLED I5 13420H",
         description: "LENOVO IDEAPAD SLIM 5 14 OLED I5 13420H 16GB 1TB W11+OHS 14.0WUXGA BLIT adalah laptop tipis dari Lenovo seri IdeaPad Slim 5 yang dilengkapi layar OLED 14 inci berkualitas tinggi, prosesor Intel Core i5-13420H, cocok untuk penggunaan profesional dan multimedia.",
-        image: "https://p16-images-sign-sg.tokopedia-static.net/tos-alisg-i-aphluv4xwc-sg/img/VqbcmM/2024/12/17/43b67429-d924-4e1c-bf0a-8fbe03f470ba.jpg~tplv-aphluv4xwc-resize-jpeg:700:0.jpeg?lk3s=0ccea506&x-expires=1767604274&x-signature=E6joAdOk5LcVCAsL5PTt5rHcAbI%3D&x-signature-webp=Y3KM8ueWK8InTTzTH9kPxCkn9D8%3D",
+        image: "https://els.id/wp-content/uploads/2024/07/Lenovo-IdeaPad-Slim-5-OLED-Blue-3.png",
       },
       {
         name: "LENOVO IDEAPAD FLEX 5 14 RYZEN 7 5825",
         description: "Lenovo IdeaPad Flex 5 14 Ryzen 7 5825 16GB 512GB W11+OHS 14\" WUXGA adalah sebuah laptop konvertibel 2-in-1 dari Lenovo yang ringkas dan fleksibel, ditenagai prosesor AMD Ryzen 7 5825U, memiliki layar sentuh WUXGA 14 inci.",
-        image: "https://p16-images-sign-sg.tokopedia-static.net/tos-alisg-i-aphluv4xwc-sg/img/VqbcmM/2025/3/21/cdb393a3-087f-4435-afa4-382e049be5dc.jpg~tplv-aphluv4xwc-resize-jpeg:700:0.jpeg?lk3s=0ccea506&x-expires=1767604403&x-signature=HgzcgTJLkXPxZV31coNs%2Bqq%2FtCQ%3D&x-signature-webp=iVYcMyue0ysUMGbGQpKXsZGAtaQ%3D",
+        image: "https://starcompjogja.com/storage/product/a0fff6916629c23a488e537754acf311_lenovo-ideapad-flex-5-ryzen-7-5700u-8gb-512gb-ssd-14-touch-ips_1.webp",
       },
       {
         name: "LAPTOP HP 14 CORE i5 120U 16GB 512GB",
         description: "LAPTOP HP 14 CORE i5 120U 16GB 512GB W11+OHS+M365B 14.0FHD COPILOT 2Yr adalah model laptop HP seri 14 inci dengan prosesor Intel Core i5 generasi ke-12, RAM 16GB, SSD 512GB, layar Full HD 14 inci, dengan fitur AI Copilot dan garansi resmi 2 tahun.",
-        image: "https://p16-images-sign-sg.tokopedia-static.net/tos-alisg-i-aphluv4xwc-sg/b96f6b463af94a028b49c99de6154603~tplv-aphluv4xwc-resize-jpeg:700:0.jpeg?lk3s=0ccea506&x-expires=1767604733&x-signature=d0brYiKbE32O8048ZW6cgtzYmPU%3D&x-signature-webp=W0kCaK%2FtEpBqtJlIjbKNx1ZoBF4%3D",
+        image: "https://image-asset.parto.id/i/3Z/04d78055011490d4a55773ed4eeacbe8.jpg",
       },
       {
         name: "ADVAN WORKPLUS RYZEN 7 7735HS 16GB 512GB",
@@ -65,7 +65,7 @@ const categoryData: Record<string, { title: string; description: string; product
       {
         name: "SLIM PC / Komputer Rakitan Gen 14 Office Intel Core i3-14100",
         description: "SLIM PC / Komputer Rakitan Gen 14 Office Intel Core Gen 14 dengan varian i3-14100, 16GB+256GB NVMe adalah komputer desktop yang dirancang untuk kebutuhan kantor/administrasi/online shop, yang menawarkan kinerja stabil dan efisiensi daya.",
-        image: "https://images.tokopedia.net/img/cache/700/VqbcmM/2024/11/14/4a7aabdb-0129-4895-8743-421e96ccdda8.jpg",
+        image: "https://static.wixstatic.com/media/7b4519_3f8c52186f16453e9d44133ee32c7579~mv2.jpeg/v1/fill/w_400,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/7b4519_3f8c52186f16453e9d44133ee32c7579~mv2.jpeg",
       },
     ],
   },
@@ -126,37 +126,111 @@ const categoryData: Record<string, { title: string; description: string; product
       },
     ],
   },
-  "service-center": {
+"service-center": {
     title: "Service Center",
     description: "Layanan perbaikan dan maintenance hardware oleh teknisi berpengalaman",
     backgroundImage: "https://img.freepik.com/premium-photo/young-male-technician-fixing-computer-wooden-desk_23-2147922181.jpg",
     products: [
-      { name: "Perbaikan Laptop" },
-      { name: "Upgrade RAM & SSD" },
-      { name: "Install Ulang Windows" },
-      { name: "Perbaikan Motherboard" },
-      { name: "Cleaning & Maintenance" },
-      { name: "Recovery Data" },
-      { name: "Perbaikan Printer" },
-      { name: "Konsultasi IT" },
+      {
+        name: "Service Printer",
+        description: "Service printer adalah layanan profesional yang bertujuan untuk memperbaiki, merawat, dan memastikan printer berfungsi dengan optimal. Layanan ini mencakup perbaikan kerusakan hardware seperti masalah pada cartridge, roller, atau board printer, serta troubleshooting masalah software seperti error pada driver atau koneksi jaringan.",
+        image: "https://t4.ftcdn.net/jpg/01/76/78/11/360_F_176781122_dG1xFwHA1XcZoDp2k0QnQdMF7Xo7RPVv.jpg",
+      },
+      {
+        name: "Upgrade PC Laptop",
+        description: "Upgrade PC atau laptop adalah layanan atau proses yang bertujuan untuk meningkatkan performa perangkat agar lebih cepat, stabil, dan mampu menjalankan aplikasi atau game terbaru dengan lancar. Layanan ini bisa mencakup penambahan atau penggantian RAM untuk multitasking lebih baik, upgrade penyimpanan dari HDD ke SSD agar akses data lebih cepat.",
+        image: "https://cdn.mos.cms.futurecdn.net/pp4zizW2oW7pUEm7fTe9vP-650-80.jpg.webp",
+      },
+      {
+        name: "Maintenance CCTV IPCAM",
+        description: "Maintenance CCTV IP Camera adalah layanan perawatan dan pengecekan rutin untuk memastikan sistem pengawasan berbasis IP (IP Camera) berfungsi dengan optimal. Layanan ini mencakup pemeriksaan kualitas gambar, pengecekan koneksi jaringan, pembersihan lensa dan sensor kamera, serta pengujian perangkat keras.",
+        image: "https://www.singaporecctv.com/wp-content/uploads/2020/07/How-to-Install-CCTV-for-Home.jpg",
+      },
+      {
+        name: "Konsultasi PC LAPTOP DAN JARINGAN",
+        description: "Konsultasi PC, laptop, dan jaringan adalah layanan profesional yang memberikan panduan, saran, dan solusi terkait masalah perangkat komputer dan koneksi jaringan. Layanan ini meliputi analisis performa PC atau laptop, pemecahan masalah hardware maupun software, serta optimasi sistem agar perangkat bekerja lebih cepat dan stabil.",
+        image: "https://ccitraining.edu/wp-content/uploads/2018/10/Computer-Network.webp",
+      },
     ],
   },
-  aksesoris: {
+aksesoris: {
     title: "Aksesoris",
     description: "Keyboard, mouse, headset, dan aksesoris komputer lainnya",
     backgroundImage: "https://i0.wp.com/www.deells.lk/wp-content/uploads/2021/09/logitech-banner-01.png?w=788&ssl=1",
     products: [
-      { name: "Keyboard Mechanical" },
-      { name: "Mouse Gaming" },
-      { name: "Headset Wireless" },
-      { name: "Webcam HD" },
-      { name: "USB Hub" },
-      { name: "Laptop Stand" },
-      { name: "Mousepad Gaming" },
-      { name: "External SSD" },
+      {
+        name: "Logitech G102 V2 Mouse Gaming",
+        description: "Logitech G102 V2 Gaming Mouse adalah mouse gaming entry-level dengan sensor akurat hingga 8.000 DPI, desain ergonomis, RGB yang dapat disesuaikan, dan 6 tombol yang bisa diprogram, cocok untuk gaming dan penggunaan sehari-hari.",
+        image: "https://els.id/wp-content/uploads/2023/09/Logitech-G102-RGB-3.png",
+      },
+      {
+        name: "Mouse Logitech G402",
+        description: "Logitech G402 Gaming Mouse adalah mouse gaming berperforma tinggi dengan sensor Hyperion Fury yang menawarkan tracking super cepat dan akurat, ideal untuk game FPS dan esport. Dibekali 8 tombol yang dapat diprogram dan desain ergonomis.",
+        image: "https://els.id/wp-content/uploads/2023/09/Logitech-G402.png",
+      },
+      {
+        name: "Gamen Titan VI Keyboard Gaming",
+        description: "Titan VI Gaming Keyboard adalah keyboard gaming entry-level yang dirancang untuk kenyamanan dan performa bermain. Keyboard ini menawarkan desain LED backlight untuk nuansa gaming yang menarik serta tombol-tombol yang responsif.",
+        image: "https://els.id/wp-content/uploads/2024/08/Gamen-Titan-VI.jpg",
+      },
+      {
+        name: "GAMEN Titan Elite Keyboard Gaming Mechanical 78 Keys",
+        description: "GAMEN Titan Elite Keyboard Gaming (78 Keys, Kabel) adalah keyboard gaming mekanis compact 78 tombol dengan desain tenkeyless (tanpa numpad) yang ideal untuk pengaturan ruang kerja atau setup gaming minimalis.",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT64nzCiUVdUHLiCuggZbvsz9Nvl_I-0GGjiA&s",
+      },
+      {
+        name: "Rexus K87M Battlefire Wired Keyboard Gaming TKL",
+        description: "Rexus K87M Battlefire Wired Keyboard Gaming adalah keyboard gaming membrane dengan layout TKL (tenkeyless) yang dirancang untuk gamer dan pengguna PC yang menginginkan ruang meja lebih luas tanpa tombol numpad.",
+        image: "https://rexus.id/cdn/shop/files/6_9.jpg?v=1759130622&width=1200",
+      },
+      {
+        name: "Headset Gaming Rexus Vonix F27",
+        description: "Rexus Vonix F27 Headset Gaming adalah headset gaming bergaya over-ear yang dirancang untuk kenyamanan dan performa audio saat bermain game. Headset ini dilengkapi driver speaker besar yang menghasilkan suara jernih dan detail.",
+        image: "https://rexus.id/cdn/shop/files/F27_3_8781e146-8df7-450c-ab84-80cf2716d0cf.png?v=1704949174&width=1200",
+      },
+      {
+        name: "Headset Gaming Rexus Vonix F80",
+        description: "Rexus Vonix F80 Headset Gaming adalah headset gaming over-ear berkabel yang dirancang untuk pengalaman audio imersif saat bermain game, mendengarkan musik, atau menonton konten.",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNCYazGEUnobwN6QKjPYkuu45zOn14AQjcXQ&s",
+      },
+      {
+        name: "Sony INZONE H3 Wired Gaming Headset MDR-G300",
+        description: "Sony INZONE H3 Wired Gaming Headset (MDR-G300) adalah headset gaming berkabel yang dirancang untuk kenyamanan dan audio yang jernih saat bermain game, menonton film, atau mendengarkan musik.",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6-kvVcUjHWMbpSy3a5NEvPU2r0qlVNS7bIQ&s",
+      },
+      {
+        name: "HANRIVER & KUCADI 813 Kursi Gaming Kantor Serba Guna",
+        description: "HANRIVER & KUCADI 813 Gaming Chair adalah kursi gaming ergonomis yang dirancang untuk kenyamanan optimal baik saat bermain game maupun bekerja lama di depan komputer. Dilengkapi sandaran tinggi dengan headrest dan bantalan empuk.",
+        image: "https://p16-oec-sg.ibyteimg.com/tos-alisg-i-aphluv4xwc-sg/5233562e134340bfbe7c76d231f0fff9~tplv-aphluv4xwc-resize-jpeg:800:800.jpeg?dr=15584&t=555f072d&ps=933b5bde&shp=6ce186a1&shcp=e1be8f53&idc=my2&from=1826719393",
+      },
+      {
+        name: "Fantech OCA260 / OC-A260 Kursi Gaming & Office Chair",
+        description: "Fantech OCA260 / OC-A260 Gaming & Office Chair adalah kursi gaming serbaguna yang dirancang untuk kenyamanan optimal saat bermain game atau bekerja lama di depan komputer.",
+        image: "https://els.id/wp-content/uploads/2025/10/Fantech-OCA260-10.png",
+      },
+      {
+        name: "Insperra Midway Manager Office & Gaming Chair",
+        description: "Insperra Midway Manager Office & Gaming Chair adalah kursi kerja ergonomis yang cocok untuk kantor, ruang kerja, maupun gaming. Dilengkapi sandaran jaring (mesh) untuk sirkulasi udara yang baik.",
+        image: "https://gudangfurniture.com/storage/1-insperra/GF_WM%20kursimidway_3.jpg",
+      },
+      {
+        name: "Oxihom F1301 Meja Gaming | Meja Kerja Minimalis",
+        description: "Oxihom F1301 Meja Gaming | Meja Kerja Minimalis adalah meja serbaguna yang dirancang untuk kebutuhan gaming, kerja, dan belajar. Meja ini menawarkan desain minimalis dan ruang permukaan yang luas.",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPV6wCkiHkdZlJTkiDZuZC-dIvceX0Kd4vzw&s",
+      },
+      {
+        name: "Fantech WorkStation WS311 Electric Adjustable Desk",
+        description: "Fantech WorkStation WS311 Electric Adjustable Desk adalah meja kerja dan PC gaming yang menawarkan kenyamanan serta fleksibilitas tinggi dengan pengaturan ketinggian elektronik.",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtpZPTFJ3SIadAOlkFxrb3BOdqf4VR57eq4Q&s",
+      },
+      {
+        name: "SEENERGY Zeus Midnight Black Gaming Glasses",
+        description: "SEENERGY Zeus Midnight Black Gaming Glasses adalah kacamata gaming yang dirancang untuk melindungi mata dari cahaya biru yang dipancarkan layar komputer, laptop, maupun ponsel.",
+        image: "https://down-id.img.susercontent.com/file/id-11134207-7rasi-m0ia8gkov1e424",
+      },
     ],
   },
-  "cctv-surveillance": {
+"cctv-surveillance": {
     title: "CCTV & Surveillance",
     description: "Sistem keamanan dan pengawasan untuk rumah dan bisnis",
     backgroundImage: "https://img.freepik.com/premium-photo/tech-installs-cctv-camera-security-purposes-concept-security-systems-cctv-installation-tech-services-surveillance-cameras_864588-234963.jpg",
@@ -164,52 +238,52 @@ const categoryData: Record<string, { title: string; description: string; product
       {
         name: "Hikvision DS-2CD1021G0-IU",
         description: "Kamera CCTV IP bullet 2MP Full HD dengan mikrofon bawaan, infrared night vision, dan dukungan PoE. Cocok untuk pengawasan indoor maupun outdoor karena tahan cuaca.",
-        image: "https://i.ibb.co/cSBQf0XF/LN3640.jpg",
+        image: "https://www.techyshop.co.ke/wp-content/uploads/2021/12/Hikvision-DS-2CD2047G1-L-4MP-ColorVu-Mini-Bullet-Network-Camera2.jpg",
       },
       {
-        name: "DS-2CD1121G0-I",
+        name: "Hikvision DS-2CD1121G0-I",
         description: "Kamera 2 MP IP Dome dengan night vision IR, tahan cuaca IP67, dan dukungan PoE — ideal untuk CCTV rumah/office yang simpel dan efektif.",
-        image: "https://i.ibb.co/Wppzj0NQ/LN3641.jpg",
+        image: "https://api.vitech.asia/storage/produk/DS-2CD1121-I_1708414745.jpg",
       },
       {
-        name: "DS-2CD1121G2-LIU",
+        name: "Hikvision DS-2CD1121G2-LIU",
         description: "Kamera CCTV IP dome 2MP Full HD dengan mic bawaan, Smart Hybrid Light, deteksi manusia/kendaraan, PoE, dan tahan cuaca.",
-        image: "https://i.ibb.co/21qwWf9c/IMG-20260105-133858.jpg",
+        image: "https://karismaharco.com/wp-content/uploads/2025/08/DS-2CD1143G2-LIUF.jpg",
       },
       {
-        name: "DS-2DE3A400BW-DE",
+        name: "Hikvision DS-2DE3A400BW-DE",
         description: "Kamera PTZ IP dengan zoom 40× untuk pengawasan jauh, Full HD, night vision, PoE, dan tahan cuaca — ideal untuk area luas dan pemantauan detail.",
-        image: "https://i.ibb.co/mp5gtLb/hikvision-colorvu-ds-2de3a400bw-de-4mp-outdoor-1605410.jpg",
+        image: "https://ibestsecurity.com.au/cdn/shop/files/2DE3A400.jpg?v=1728621015",
       },
       {
-        name: "DS-2CD2T66G2H-IS2U/SL",
+        name: "Hikvision DS-2CD2T66G2H-IS2U/SL",
         description: "Kamera CCTV IP turret 6 MP dengan mic & speaker, night vision warna, PoE, dan tahan cuaca — cocok untuk pengawasan detail di rumah/usaha.",
-        image: "https://i.ibb.co/cXt4HG9b/DS-2-CD2-T46-G2-ISUSL-C-45-thumb-1280-1280-1.jpg",
+        image: "https://cctvimporters.com.au/cdn/shop/products/HIK-2CD2T65G1I82cam.jpg?v=1660364655",
       },
       {
         name: "DS-7608NXI-K1/8P",
         description: "NVR 8-channel dengan 8 port PoE built-in untuk koneksi mudah kamera IP, mendukung rekaman berkualitas tinggi dan manajemen pengawasan terpusat.",
-        image: "https://i.ibb.co/tT2nd3sS/ds-7608nxi-k1-alarm4-1-d.jpg",
+        image: "https://gfx3.senetic.com/akeneo-catalog/7/9/6/c/796cbc43275a4c0054200fc2f2e46488c3812ad4_0_2_3_10586_1_8149_1_13171_1_2762_1_1532_1_460_1_42_1_6773_1_13_1_5514_1_12024_1_3806.jpg",
       },
       {
         name: "DS-7732NI-M4",
         description: "NVR 32-channel untuk mengelola banyak kamera IP sekaligus, mendukung rekaman resolusi tinggi dan pengawasan stabil.",
-        image: "https://i.ibb.co/spgRv3rN/P1-png-thumb-1280-1280.png",
+        image: "https://m.media-amazon.com/images/I/41u9lgGSEyL._AC_SL1280_.jpg",
       },
       {
         name: "DS-7616NI-M2",
         description: "NVR 16-channel untuk merekam dan mengelola banyak kamera IP secara andal, cocok untuk sistem CCTV rumah/usaha.",
-        image: "https://i.ibb.co/GfGrR5Zx/MB-203-Y-P-HIKVISION.jpg",
+        image: "https://www.dvs.co.uk/media/catalog/product/cache/05b62ec05c342ceed7b0ef12adad5fc1/H/I/HIKV-DS-7616NI-M2-16P_01.jpeg",
       },
       {
         name: "EZVIZ EB8 4G 4K SOLAR PANEL",
         description: "Kamera 4K 4G nirkabel dengan panel surya terintegrasi, ideal untuk pengawasan tanpa kabel di area luar — hasil jernih, koneksi 4G, dan daya berkelanjutan dari sinar matahari.",
-        image: "https://i.ibb.co/sv16jb9Y/61-Ejw8c-HJSL.jpg",
+        image: "https://mfs.ezvizlife.com/628b38932c58b560accbe4f38703e4cb.png",
       },
       {
         name: "DS-2CD1127G2H-LIUF",
         description: "Kamera IP dome 2 MP dengan mic & speaker, night vision warna, deteksi pintar, PoE, dan tahan cuaca — cocok untuk pengawasan rumah atau usaha.",
-        image: "https://i.ibb.co/WvLsGYqR/DS-2-CD1127-G2-H-LIU.jpg",
+        image: "https://lumajang.nale.co.id/wp-content/uploads/2024/08/DS-2CD1127G2H-LIU.jpg",
       },
     ],
   },
@@ -280,7 +354,7 @@ const categoryData: Record<string, { title: string; description: string; product
       },
     ],
   },
-  "printer-scanner": {
+"printer-scanner": {
     title: "Printer & Scanner",
     description: "Solusi cetak dan scan untuk kebutuhan kantor dan rumah",
     backgroundImage: "https://iprsoftwaremedia.com/108/files/20214/60909ba5b3aed365d13a686e_Banner%20MNR%20ET%20Photo_ET%20Pro/Banner%20MNR%20ET%20Photo_ET%20Pro_60e877d3-c51b-4909-b57a-d60e2f902159-prv.png",
@@ -298,7 +372,7 @@ const categoryData: Record<string, { title: string; description: string; product
       {
         name: "Epson WorkForce WF-100",
         description: "Printer Epson WorkForce WF-100 memiliki keunggulan utama pada desainnya yang portabel, ringan, dan mudah dibawa, dilengkapi baterai internal sehingga bisa digunakan tanpa listrik langsung. Printer ini sudah mendukung Wi-Fi dan Wi-Fi Direct.",
-        image: "https://www.epson.co.id/Support/Printers/Printer-inkjet/WorkForce-Series/Epson-WorkForce-WF-100/s/SPT_C11CE05502",
+        image: "https://mediaserver.goepson.com/ImConvServlet/imconv/ca3a9c9cf8e1a2b9715f0de7545a80540d82c3e1/1200Wx1200H?use=banner&hybrisId=B2C&assetDescr=WF100_550px-X-310px",
       },
       {
         name: "Epson WorkForce Pro WF-C5390",
@@ -308,7 +382,7 @@ const categoryData: Record<string, { title: string; description: string; product
       {
         name: "HP DeskJet",
         description: "Printer HP DeskJet unggul karena desainnya yang kompak dan harga relatif terjangkau, serta dukungan konektivitas Wi-Fi dan USB yang memudahkan cetak dari laptop atau smartphone melalui aplikasi HP Smart.",
-        image: "https://www.hp.com/id-id/shop/hp-deskjet-ink-advantage-4275-all-in-one-printer-588k0b.html",
+        image: "https://id-media.apjonlinecdn.com/catalog/product/cache/b3b166914d87ce343d4dc5ec5117b502/t/a/tassel_plus_hp_deskjet_4252e_all-in-one_hero_image_enus.png",
       },
       {
         name: "HP Color 10050A",
